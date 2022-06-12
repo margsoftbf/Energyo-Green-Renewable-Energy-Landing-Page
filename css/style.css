@@ -15,6 +15,7 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
+  height: 200vh;
 }
 
 a {
@@ -29,5 +30,218 @@ button {
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+.header {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header__menu {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background-color: #fff;
+  height: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+}
+
+.header__logo i {
+  color: #0ed482;
+  font-size: 2.8rem;
+  margin: 0.3em;
+}
+
+.header__logo--title {
+  color: #00384f;
+  font-size: 2.2rem;
+}
+
+.header .hamburger {
+  margin-top: 0.5em;
+  z-index: 100;
+}
+
+.mobile {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  background-color: #fff;
+  z-index: 10;
+  -webkit-transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.mobile-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.mobile__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile__item {
+  position: relative;
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  margin: 1em;
+  color: #00384f;
+  font-size: 2rem;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.mobile__item::before {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 100%;
+  bottom: -0.1em;
+  background-color: #0ed482;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.mobile__item:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.desktop {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .mobile__item {
+    top: 1em;
+    margin: 0.3em;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile__item {
+    margin: 1em;
+    font-size: 3rem;
+  }
+  .header__logo i {
+    font-size: 3.2rem;
+  }
+  .header__logo--title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile {
+    display: none;
+  }
+  .hamburger {
+    display: none;
+  }
+  .header__logo i {
+    font-size: 3.8rem;
+  }
+  .header__logo--title {
+    font-size: 2.8rem;
+  }
+  .header .hamburger {
+    margin-top: 0.5em;
+    z-index: 100;
+  }
+  .desktop {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .desktop__items {
+    margin-right: 1em;
+  }
+  .desktop__item {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    color: #00384f;
+    margin-left: 1em;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  .desktop__item:hover {
+    color: #0ed482;
+  }
+  .desktop__item::before {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    bottom: -0.4em;
+    background-color: #0ed482;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  .desktop__item:hover::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
 }
 /*# sourceMappingURL=style.css.map */

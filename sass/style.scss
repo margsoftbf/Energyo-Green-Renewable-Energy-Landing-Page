@@ -1,4 +1,5 @@
 @import './animation';
+@import './colors';
 *,
 *::after,
 *::before {
@@ -16,6 +17,7 @@ html {
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
+	height: 200vh;
 }
 
 a {
@@ -32,7 +34,101 @@ button {
 	max-width: 1200px;
 }
 
+.header {
+	position: relative;
+	height: 80px;
+	width: 100%;
+	overflow: hidden;
+
+	&__menu {
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		background-color: $white;
+		height: 80px;
+		width: 100%;
+		max-width: 1200px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		z-index: 100;
+
+		i {
+			color: $primary-color;
+			font-size: 2.8rem;
+			margin: 0.3em;
+		}
+
+		&--title {
+			color: $secondary-color;
+			font-size: 2.2rem;
+		}
+	}
+
+	.hamburger {
+		margin-top: 0.5em;
+		z-index: 100;
+	}
+}
+
+.mobile {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	background-color: $white;
+	z-index: 10;
+	transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+	&-active {
+		transform: translateX(0);
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		font-family: 'Roboto', sans-serif;
+		margin: 1em;
+		color: $secondary-color;
+		font-size: 2rem;
+		text-decoration: none;
+		transition: color 0.3s;
+		cursor: pointer;
+	}
+
+	&__item::before {
+		position: absolute;
+		content: '';
+		height: 3px;
+		width: 100%;
+		bottom: -0.1em;
+		background-color: $primary-color;
+		transition: transform 0.3s;
+		transform: scaleX(0);
+		transform-origin: right;
+	}
+
+	&__item:hover::before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+}
+
+.desktop {
+	display: none;
+}
+
 @import './small';
 @import './medium';
 @import './large';
-@import './colors';

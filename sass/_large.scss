@@ -1,0 +1,67 @@
+@media (min-width: 992px) {
+	.mobile {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.header {
+		&__logo {
+			i {
+				font-size: 3.8rem;
+			}
+
+			&--title {
+				font-size: 2.8rem;
+			}
+		}
+
+		.hamburger {
+			margin-top: 0.5em;
+			z-index: 100;
+		}
+	}
+
+	.desktop {
+		position: relative;
+		display: flex;
+		align-items: center;
+
+		&__items {
+			margin-right: 1em;
+		}
+		&__item {
+			position: relative;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.6rem;
+			color: $secondary-color;
+			margin-left: 1em;
+			text-decoration: none;
+			transition: color 0.3s;
+			cursor: pointer;
+		}
+
+		&__item:hover {
+			color: $primary-color;
+		}
+
+		&__item::before {
+			position: absolute;
+			content: '';
+			height: 3px;
+			width: 100%;
+			bottom: -0.4em;
+			background-color: $primary-color;
+			transition: transform 0.3s;
+			transform: scaleX(0);
+			transform-origin: right;
+		}
+
+		&__item:hover::before {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+	}
+}
