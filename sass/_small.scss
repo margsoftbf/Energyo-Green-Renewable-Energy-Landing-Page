@@ -3,4 +3,25 @@
 		top: 1em;
 		margin: 0.3em;
 	}
+
+	.header {
+		&__title {
+			padding: 0 1.1em;
+		}
+
+		&__description {
+			padding: 1em 3em;
+		}
+		&__buttons {
+			flex-direction: row;
+
+			&--quote {
+				width: 220px;
+			}
+
+			&--discover {
+				width: 220px;
+			}
+		}
+	}
 }

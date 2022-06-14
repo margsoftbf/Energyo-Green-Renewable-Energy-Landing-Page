@@ -64,4 +64,13 @@
 			transform-origin: left;
 		}
 	}
+
+	.header__hero {
+		background-image: url('../img/hero_big.jpg');
+		height: 60vh;
+	}
+
+	.fa-chevron-down {
+		display: none;
+	}
 }
