@@ -15,21 +15,21 @@ item.addEventListener('click', () =>{
     handleNavItemsAnimation()
 }
 
+
 const handleNavItemsAnimation = () => {
     let delayTime = 0;
-
+    
     allNavItems.forEach((item) => {
         item.classList.toggle('nav-items-animation');
         item.style.animationDelay = '.' + delayTime + 's';
         delayTime++;
     });
 };
+const deleteAnimation = () => {
+    allNavItems.forEach((item) => {
+        item.classList.remove('nav-items-animation');
+    });
+};
 
-// Bez tej funkcji oraz onClick=deleteAnimation w html, nasza animacja wykona się tylko raz w menu
-// const deleteAnimation = () => {
-//     allNavItems.forEach((item) => {
-//         item.classList.remove('nav-items-animation');
-//     });
-// };
 
 navBurger.addEventListener('click', handleNav)

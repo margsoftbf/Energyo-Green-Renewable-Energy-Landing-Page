@@ -340,7 +340,7 @@ button {
 }
 
 .header__buttons--quote {
-  padding: 1em;
+  padding: 1.2em;
   margin: 1em;
   width: 260px;
   color: #fff;
@@ -404,6 +404,16 @@ button {
 
 .aboutus {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100%;
   background-color: #fff;
   margin: 1em;
@@ -477,6 +487,10 @@ button {
   color: #333;
 }
 
+.aboutus__text--btn {
+  display: none;
+}
+
 .howitworks {
   background-color: #333;
   height: 100vh;
@@ -486,6 +500,12 @@ button {
   .mobile__item {
     top: 1em;
     margin: 0.3em;
+  }
+  .section__title {
+    font-size: 2.2rem;
+  }
+  .section__title::before {
+    width: 160px;
   }
   .header__title {
     padding: 0 1.1em;
@@ -512,6 +532,12 @@ button {
     margin: 1em;
     font-size: 3rem;
   }
+  .section__title {
+    font-size: 2.4rem;
+  }
+  .section__title::before {
+    width: 180px;
+  }
   .header__title {
     font-size: 6rem;
     padding: 0;
@@ -534,6 +560,18 @@ button {
   }
   .hamburger {
     display: none;
+  }
+  .section__title {
+    margin: 0 auto;
+    font-size: 2.8rem;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 0 1em 0;
+  }
+  .section__title::before {
+    left: 0;
+    width: 100%;
   }
   .header__logo i {
     font-size: 3.8rem;
@@ -561,6 +599,7 @@ button {
     position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
+    font-weight: bold;
     color: #00384f;
     margin-left: 1em;
     text-decoration: none;
@@ -599,6 +638,48 @@ button {
   }
   .fa-chevron-down {
     display: none;
+  }
+  .aboutus {
+    padding: 2em;
+  }
+  .aboutus__boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .aboutus__img {
+    min-width: 45%;
+  }
+  .aboutus__text {
+    position: relative;
+    margin: 0;
+    padding: 0 2em;
+  }
+  .aboutus__text--btn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    margin-right: 2em;
+    width: 200px;
+    color: #0ed482;
+    background-color: transparent;
+    border: 1px solid #0ed482;
+    font-weight: bold;
+    -webkit-transition: color 0.5s, background-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
+  }
+  .aboutus__text--btn:hover {
+    color: #fff;
+    background-color: #0ed482;
+  }
+  .aboutus__title {
+    padding: 0;
+    font-size: 3.3rem;
+  }
+  .aboutus__lorem {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
