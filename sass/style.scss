@@ -237,15 +237,13 @@ button {
 
 .aboutus {
 	position: relative;
-	height: 100vh;
+	height: 100%;
 	background-color: $white;
 	margin: 1em;
 
 	&__img {
 		position: relative;
 		display: flex;
-		// justify-content: center;
-		// align-items: center;
 		margin: 0 auto;
 		width: 100%;
 		height: 280px;
@@ -286,6 +284,23 @@ button {
 			}
 		}
 	}
+
+	&__title {
+		position: relative;
+		padding-top: 1.7em;
+		font-size: 3rem;
+		color: $secondary-color;
+	}
+
+	&__lorem {
+		padding-top: 0.8em;
+		color: #333;
+	}
+}
+
+.howitworks {
+	background-color: #333;
+	height: 100vh;
 }
 @import './small';
 @import './medium';

@@ -404,7 +404,7 @@ button {
 
 .aboutus {
   position: relative;
-  height: 100vh;
+  height: 100%;
   background-color: #fff;
   margin: 1em;
 }
@@ -463,6 +463,23 @@ button {
   font-size: 2.2rem;
   margin-right: 0.2em;
   color: #00384f;
+}
+
+.aboutus__title {
+  position: relative;
+  padding-top: 1.7em;
+  font-size: 3rem;
+  color: #00384f;
+}
+
+.aboutus__lorem {
+  padding-top: 0.8em;
+  color: #333;
+}
+
+.howitworks {
+  background-color: #333;
+  height: 100vh;
 }
 
 @media (min-width: 576px) {
