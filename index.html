@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b4480fb9a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/hamburger.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -54,22 +55,44 @@
         <div class="header__hero">
             <div class="header__hero--img"></div>
             <div class="header__hero--shadow"></div>
-            <h1 class="header__title">Cleaner Energy for a Cleaner World</h1>
-            <p class="header__description">Help protect us the environment by powering your home with 100%
+            <h1 class="header__title" data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">Cleaner Energy
+                for a Cleaner World</h1>
+            <p class="header__description" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">Help
+                protect us the environment by
+                powering your home with 100%
                 renewable energy.</p>
             <div class="header__buttons">
-                <button class="header__buttons--quote">Get a Qoute</button>
-                <button class="header__buttons--discover">Discover More</button>
+                <button class="header__buttons--quote" data-aos="flip-left" data-aos-delay="150"
+                    data-aos-duration="1000">Get a Qoute</button>
+                <button class="header__buttons--discover" data-aos="flip-right" data-aos-delay="150"
+                    data-aos-duration="1000">Discover
+                    More</button>
             </div>
             <a href="#aboutus"><i class="fas fa-chevron-down bounce-top"></i></a>
         </div>
     </header>
     <main>
         <section class="aboutus" id="aboutus">
-
+            <h2 class="section__title" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">About us</h2>
+            <div class="aboutus__img" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                <div class="aboutus__box" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+                    <i class="fa-solid fa-thumbs-up"></i>
+                    <p class="aboutus__box--text"><span>2090</span> Happy Clients</p>
+                </div>
+            </div>
         </section>
     </main>
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+
+            startEvent: 'DOMContentLoaded',
+            offset: 200,
+            once: true
+
+        });
+    </script>
 </body>
 
 </html>

@@ -1,33 +1,3 @@
-@-webkit-keyframes scaleHero {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scaleHero {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .bounce-top {
   display: block;
   -webkit-animation: bounce-top 2s infinite both;
@@ -116,6 +86,36 @@
   }
 }
 
+@-webkit-keyframes navItemsAnimation {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navItemsAnimation {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  50% {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -131,7 +131,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   height: 200vh;
 }
@@ -197,6 +197,11 @@ button {
   z-index: 100;
 }
 
+.nav-items-animation {
+  -webkit-animation: navItemsAnimation 1s both;
+          animation: navItemsAnimation 1s both;
+}
+
 .mobile {
   position: fixed;
   display: -webkit-box;
@@ -236,7 +241,6 @@ button {
 .mobile__item {
   position: relative;
   display: block;
-  font-family: 'Roboto', sans-serif;
   margin: 1em;
   color: #00384f;
   font-size: 2rem;
@@ -276,7 +280,6 @@ button {
 
 .header__hero {
   position: relative;
-  font-family: 'Roboto', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,12 +375,94 @@ button {
   border: 2px solid #0ed482;
 }
 
+.section__title {
+  position: relative;
+  font-size: 1.8rem;
+  padding: 1em;
+  margin-bottom: 1em;
+  color: #0ed482;
+  text-transform: uppercase;
+}
+
+.section__title::before {
+  position: absolute;
+  content: '';
+  margin: 1.3em auto;
+  left: -30px;
+  width: 140px;
+  height: 3px;
+  background-color: #00384f;
+}
+
 .fa-chevron-down {
   position: absolute;
   left: calc(50% - 15px);
   bottom: 5px;
   font-size: 30px;
   color: #fff;
+}
+
+.aboutus {
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+  margin: 1em;
+}
+
+.aboutus__img {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height: 280px;
+  background-image: url("../img/aboutus_small.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.aboutus__box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: -30px;
+  left: 10px;
+  height: 60px;
+  width: 250px;
+  background-color: #0ed482;
+  border-radius: 15px;
+}
+
+.aboutus__box i {
+  color: #fff;
+  font-size: 3rem;
+  padding: 0.5em;
+}
+
+.aboutus__box--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.aboutus__box--text span {
+  font-size: 2.2rem;
+  margin-right: 0.2em;
+  color: #00384f;
 }
 
 @media (min-width: 576px) {
@@ -493,7 +578,7 @@ button {
   }
   .header__hero {
     background-image: url("../img/hero_big.jpg");
-    height: 60vh;
+    height: 50vh;
   }
   .fa-chevron-down {
     display: none;
