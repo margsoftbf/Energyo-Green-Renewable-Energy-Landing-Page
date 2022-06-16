@@ -1,15 +1,17 @@
 const navBurger = document.querySelector('.hamburger')
 const mobileMenu = document.querySelector('.mobile')
 const allNavItems = document.querySelectorAll('.mobile__item')
+const counterItems = document.querySelectorAll('.counter')
+const counterBox = document.querySelector('.counter-box')
 
 function handleNav() {
-navBurger.classList.toggle('is-active')
-mobileMenu.classList.toggle('mobile-active')
+    navBurger.classList.toggle('is-active')
+    mobileMenu.classList.toggle('mobile-active')
 
-allNavItems.forEach(item => {
-item.addEventListener('click', () =>{
-    navBurger.classList.remove('is-active')
-    mobileMenu.classList.remove('mobile-active')
+    allNavItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navBurger.classList.remove('is-active')
+            mobileMenu.classList.remove('mobile-active')
         })
     })
     handleNavItemsAnimation()
@@ -18,7 +20,7 @@ item.addEventListener('click', () =>{
 
 const handleNavItemsAnimation = () => {
     let delayTime = 0;
-    
+
     allNavItems.forEach((item) => {
         item.classList.toggle('nav-items-animation');
         item.style.animationDelay = '.' + delayTime + 's';
@@ -30,6 +32,41 @@ const deleteAnimation = () => {
         item.classList.remove('nav-items-animation');
     });
 };
+
+const counterOption = {
+    rootMargin: '-260px'
+}
+
+const startCounter = entry => {
+    console.log(entry[0].isIntersecting);
+
+    if (entry[0].isIntersecting) {
+        counterItems.forEach(counter => {
+
+            const updateCounter = () => {
+                const finalNumber = counter.getAttribute('data-number')
+                const value = parseInt(counter.textContent)
+
+                const speed = finalNumber / 300
+
+
+                if (value < finalNumber) {
+                    counter.textContent = `${Math.floor(value + speed)}`
+                    setTimeout(updateCounter, 1)
+                } else {
+                    counter.textContent = finalNumber
+                }
+            }
+
+            updateCounter()
+
+        })
+    }
+}
+
+const observer = new IntersectionObserver(startCounter, counterOption)
+observer.observe(counterBox)
+
 
 
 navBurger.addEventListener('click', handleNav)
