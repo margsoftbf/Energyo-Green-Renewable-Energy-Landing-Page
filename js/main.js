@@ -34,7 +34,7 @@ const deleteAnimation = () => {
 };
 
 const counterOption = {
-    root: document.body,
+    root: null,
     rootMargin: '-260px',
     threshold: 0.1
 }
