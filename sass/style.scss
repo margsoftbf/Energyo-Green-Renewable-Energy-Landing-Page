@@ -140,7 +140,7 @@ button {
 	background-position: center;
 	height: 100vh;
 	width: 100vw;
-	// animation: scaleHero 15s ease infinite;
+	animation: scaleHero 15s ease infinite;
 
 	&--shadow {
 		position: absolute;
@@ -210,20 +210,28 @@ button {
 
 .section__title {
 	position: relative;
-	font-size: 1.8rem;
+	font-size: 2rem;
 	padding: 1em;
 	margin-bottom: 1em;
 	color: $primary-color;
 	text-transform: uppercase;
+	width: fit-content;
 
 	&::before {
 		position: absolute;
 		content: '';
 		margin: 1.3em auto;
 		left: -30px;
-		width: 140px;
+		width: calc(100% + 15px);
 		height: 3px;
 		background-color: $secondary-color;
+	}
+}
+.section__title-dark {
+	color: $white;
+
+	&::before {
+		background-color: $primary-color;
 	}
 }
 
@@ -308,8 +316,48 @@ button {
 }
 
 .howitworks {
-	background-color: #333;
+	background-color: $secondary-color;
 	height: 100vh;
+	width: 100%;
+}
+
+.how__boxes {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.how__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	max-width: 280px;
+	background-color: $white;
+	border-radius: 7px;
+	padding: 1.5em 0;
+
+	&--icon {
+		padding: 1em;
+		color: $primary-color;
+
+		i {
+			font-size: 5rem;
+		}
+	}
+
+	&--title {
+		font-size: 2.4rem;
+		color: $secondary-color;
+	}
+
+	&--description {
+		color: #333;
+		text-align: center;
+		line-height: 1.5em;
+		padding: 1em 3em;
+	}
 }
 @import './small';
 @import './medium';
