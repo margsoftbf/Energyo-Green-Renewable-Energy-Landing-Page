@@ -34,6 +34,14 @@ button {
 	max-width: 1200px;
 }
 
+.swiper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 280px;
+}
+
 .header {
 	position: relative;
 	overflow: hidden;
@@ -316,6 +324,7 @@ button {
 }
 
 .howitworks {
+	position: relative;
 	background-color: $secondary-color;
 	height: 100%;
 	width: 100%;
@@ -402,12 +411,37 @@ button {
 		}
 	}
 }
-.swiper {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	max-width: 280px;
+
+.how__bg-icon {
+	position: absolute;
+	top: 0;
+	width: 350px;
+	height: 350px;
+	display: block;
+	opacity: 0.05;
+
+	&--one {
+		top: 18%;
+		animation: rotate-right 160s infinite linear;
+	}
+
+	&--two {
+		bottom: 10%;
+		right: 20%;
+		animation: rotate-left 140s infinite linear;
+	}
+
+	&--three {
+		top: 26%;
+		left: 26%;
+		animation: rotate-left 160s infinite linear;
+	}
+
+	&--four {
+		top: 55%;
+		right: 5%;
+		animation: rotate-right 140s infinite linear;
+	}
 }
 
 @import './small';

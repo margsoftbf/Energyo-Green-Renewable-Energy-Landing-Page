@@ -32,8 +32,8 @@
 
             <nav class="mobile">
                 <div class="mobile__items">
-                    <a href="#aboutus" class="mobile__item" onclick="deleteAnimation()">About us</a>
-                    <a href="#howitworks" class="mobile__item" onclick="deleteAnimation()">How it works</a>
+                    <a href="#about-us" class="mobile__item" onclick="deleteAnimation()">About us</a>
+                    <a href="#how-it-works" class="mobile__item" onclick="deleteAnimation()">How it works</a>
                     <a href="#pricing" class="mobile__item" onclick="deleteAnimation()">Pricing & Plans</a>
                     <a href="#gallery" class="mobile__item" onclick="deleteAnimation()">Our Gallery</a>
                     <a href="#ourteam" class="mobile__item" onclick="deleteAnimation()">Our Team</a>
@@ -43,8 +43,8 @@
             </nav>
             <nav class="desktop">
                 <div class="desktop__items">
-                    <a href="#aboutus" class="desktop__item" onclick="deleteAnimation()">About us</a>
-                    <a href="#howitworks" class="desktop__item" onclick="deleteAnimation()">How it works</a>
+                    <a href="#about-us" class="desktop__item" onclick="deleteAnimation()">About us</a>
+                    <a href="#how-it-works" class="desktop__item" onclick="deleteAnimation()">How it works</a>
                     <a href="#pricing" class="desktop__item" onclick="deleteAnimation()">Pricing & Plans</a>
                     <a href="#gallery" class="desktop__item" onclick="deleteAnimation()">Our Gallery</a>
                     <a href="#ourteam" class="desktop__item" onclick="deleteAnimation()">Our Team</a>
@@ -111,7 +111,8 @@
                     data-aos-duration="1000">How it
                     works
                 </h2>
-                <div class="how__boxes swiper mySwiper ">
+                <div class="how__boxes swiper mySwiper " data-aos="fade-up" data-aos-delay="150"
+                    data-aos-duration="1000">
                     <div class="swiper-wrapper">
                         <div class="how__box swiper-slide">
                             <div class="how__box--icon"><i class="fa-solid fa-crosshairs"></i></div>
@@ -149,9 +150,21 @@
                                 Neque similique assumenda atque maiores, quae unde.</div>
                             <button class="how__box--btn">Check More <i class="fas fa-arrow-right"></i></button>
                         </div>
+                        <div class="how__box swiper-slide">
+                            <div class="how__box--icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                            <h3 class="how__box--title">Lower bills</h3>
+                            <div class="how__box--description">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit.
+                                Neque similique assumenda atque maiores, quae unde.</div>
+                            <button class="how__box--btn">Check More <i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <img src="/img/icons/square.svg" alt="" class="how__bg-icon how__bg-icon--one">
+            <img src="/img/icons/square.svg" alt="" class="how__bg-icon how__bg-icon--two">
+            <img src="/img/icons/x.svg" alt="" class="how__bg-icon how__bg-icon--three">
+            <img src="/img/icons/x.svg" alt="" class="how__bg-icon how__bg-icon--four">
         </section>
     </main>
     <script src="./js/main.js"></script>
