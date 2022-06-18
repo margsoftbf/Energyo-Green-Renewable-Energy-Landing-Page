@@ -567,6 +567,40 @@ button {
 		}
 	}
 }
+.active {
+	background-color: $secondary-color;
+
+	.pricing-box__title {
+		color: $white;
+
+		i {
+			color: $white;
+		}
+	}
+
+	.pricing-box__price {
+		color: $white;
+	}
+
+	.pricing-box__list--title {
+		color: $white;
+	}
+
+	.pricing-box__btn:hover {
+		background-color: $white;
+		color: $secondary-color;
+	}
+
+	.pricing-box__select {
+		border: 2px solid $white;
+		color: $white;
+
+		&:hover {
+			background-color: $white;
+			color: $secondary-color;
+		}
+	}
+}
 
 @import './small';
 @import './medium';

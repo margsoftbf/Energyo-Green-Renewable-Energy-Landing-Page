@@ -876,6 +876,41 @@ button {
   border: 2px solid #0aaf6a;
 }
 
+.active {
+  background-color: #00384f;
+}
+
+.active .pricing-box__title {
+  color: #fff;
+}
+
+.active .pricing-box__title i {
+  color: #fff;
+}
+
+.active .pricing-box__price {
+  color: #fff;
+}
+
+.active .pricing-box__list--title {
+  color: #fff;
+}
+
+.active .pricing-box__btn:hover {
+  background-color: #fff;
+  color: #00384f;
+}
+
+.active .pricing-box__select {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.active .pricing-box__select:hover {
+  background-color: #fff;
+  color: #00384f;
+}
+
 @media (min-width: 576px) {
   .mobile__item {
     top: 1em;

@@ -3,6 +3,7 @@ const mobileMenu = document.querySelector('.mobile')
 const allNavItems = document.querySelectorAll('.mobile__item')
 const counterItems = document.querySelectorAll('.counter')
 const counterBox = document.querySelector('.counter-box')
+const pricingBoxBtn = document.querySelectorAll('.pricing-box__select')
 
 function handleNav() {
     navBurger.classList.toggle('is-active')
@@ -65,8 +66,31 @@ const startCounter = entry => {
     }
 }
 
+
 const observer = new IntersectionObserver(startCounter, counterOption)
 observer.observe(counterBox)
 
 
+function selectedOption(e) {
+    removeSelected()
+    removeButtonText()
+    e.target.parentElement.classList.add('active')
+    e.target.textContent = 'Selected'
+}
+
+function removeButtonText() {
+    const selectedButton = document.querySelectorAll('.pricing-box__select')
+    selectedButton.forEach((item) => {
+        item.textContent = 'Select'
+    })
+}
+
+
+function removeSelected() {
+    const selectedBox = document.querySelectorAll('.pricing-box')
+    selectedBox.forEach(item => {
+        item.classList.remove('active')
+    })
+}
+pricingBoxBtn.forEach(item => item.addEventListener('click', selectedOption))
 navBurger.addEventListener('click', handleNav)
