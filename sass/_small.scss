@@ -5,7 +5,7 @@
 	}
 
 	.section__title {
-		font-size: 2.2rem;
+		font-size: 1.6rem;
 	}
 
 	.header {
@@ -35,5 +35,14 @@
 
 	.pricing__boxes {
 		flex-direction: row;
+	}
+
+	.gallery {
+		&__box {
+			img {
+				width: 240px;
+				margin: 0.5em;
+			}
+		}
 	}
 }

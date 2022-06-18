@@ -5,7 +5,7 @@
 	}
 
 	.section__title {
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
 	.header {
@@ -31,5 +31,14 @@
 
 	.swiper {
 		max-width: 720px;
+	}
+
+	.gallery {
+		&__box {
+			img {
+				width: 300px;
+				margin: 0.5em;
+			}
+		}
 	}
 }

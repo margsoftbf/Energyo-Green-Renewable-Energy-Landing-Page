@@ -220,7 +220,7 @@ button {
 
 .section__title {
 	position: relative;
-	font-size: 2rem;
+	font-size: 1.6rem;
 	padding: 1em;
 	margin-bottom: 1em;
 	color: $primary-color;
@@ -330,7 +330,6 @@ button {
 	background-color: $secondary-color;
 	height: 100%;
 	width: 100%;
-
 	overflow: hidden;
 }
 
@@ -598,6 +597,40 @@ button {
 		&:hover {
 			background-color: $white;
 			color: $secondary-color;
+		}
+	}
+}
+
+.gallery {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/gallery_small.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 2em;
+	overflow: hidden;
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $secondary-color;
+		opacity: 0.9;
+		z-index: 0;
+	}
+
+	&__box {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		img {
+			width: 300px;
+			height: auto;
+			margin: 1.8em 0 0 0;
 		}
 	}
 }
