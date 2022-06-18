@@ -242,6 +242,20 @@ button {
   max-width: 280px;
 }
 
+.swiperTeam {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 300px;
+}
+
 .header {
   position: relative;
   overflow: hidden;
@@ -952,6 +966,118 @@ button {
   margin: 1.8em 0 0 0;
 }
 
+.team {
+  position: relative;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.team__boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.team__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 1.5em 0;
+  margin: 2em 0;
+  border: 0.05em solid #d3cccc;
+}
+
+.team__box--ellipse {
+  position: absolute;
+  top: 0;
+  background-color: #00384f;
+  width: 100%;
+  height: 125px;
+  border-radius: 90% / 0 0 100% 100%;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.team__box--photo {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin: 1em;
+  border: 3px solid #00384f;
+  z-index: 5;
+}
+
+.team__box--name {
+  color: #00384f;
+}
+
+.team__box--desc {
+  text-align: center;
+  margin: 1em;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #d3cccc;
+}
+
+.team__box--title {
+  color: #0aaf6a;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1em;
+}
+
+.team__box--links {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 1em;
+}
+
+.team__box--links i {
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.team__box--links i:hover {
+  color: #00384f;
+}
+
 @media (min-width: 576px) {
   .mobile__item {
     top: 1em;
@@ -979,6 +1105,9 @@ button {
     width: 220px;
   }
   .swiper {
+    max-width: 480px;
+  }
+  .swiperTeam {
     max-width: 480px;
   }
   .pricing__boxes {
@@ -1016,6 +1145,9 @@ button {
     width: 260px;
   }
   .swiper {
+    max-width: 720px;
+  }
+  .swiperTeam {
     max-width: 720px;
   }
   .gallery__box img {
@@ -1153,6 +1285,9 @@ button {
     font-size: 1.8rem;
   }
   .swiper {
+    max-width: 950px;
+  }
+  .swiperTeam {
     max-width: 950px;
   }
   .pricing-box {

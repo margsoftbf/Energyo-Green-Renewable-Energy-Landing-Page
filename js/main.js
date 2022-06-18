@@ -85,12 +85,19 @@ function removeButtonText() {
     })
 }
 
-
 function removeSelected() {
     const selectedBox = document.querySelectorAll('.pricing-box')
     selectedBox.forEach(item => {
         item.classList.remove('active')
     })
 }
+
+
+
+
+
+
+
+
 pricingBoxBtn.forEach(item => item.addEventListener('click', selectedOption))
 navBurger.addEventListener('click', handleNav)
