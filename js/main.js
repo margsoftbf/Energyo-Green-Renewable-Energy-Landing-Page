@@ -40,7 +40,6 @@ const counterOption = {
 }
 
 const startCounter = entry => {
-    console.log(entry[0].isIntersecting);
 
     if (entry[0].isIntersecting) {
         counterItems.forEach(counter => {
@@ -68,7 +67,6 @@ const startCounter = entry => {
 
 const observer = new IntersectionObserver(startCounter, counterOption)
 observer.observe(counterBox)
-
 
 
 navBurger.addEventListener('click', handleNav)
