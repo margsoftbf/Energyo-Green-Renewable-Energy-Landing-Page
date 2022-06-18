@@ -317,14 +317,18 @@ button {
 
 .howitworks {
 	background-color: $secondary-color;
-	height: 100vh;
+	height: 100%;
 	width: 100%;
+
+	overflow: hidden;
 }
 
 .how__boxes {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	margin: 0 auto;
 }
 
 .how__box {
@@ -337,6 +341,7 @@ button {
 	background-color: $white;
 	border-radius: 7px;
 	padding: 1.5em 0;
+	margin-bottom: 2em;
 
 	&--icon {
 		padding: 1em;
@@ -358,7 +363,53 @@ button {
 		line-height: 1.5em;
 		padding: 1em 3em;
 	}
+
+	&--btn {
+		width: 140px;
+		padding: 10px 20px;
+		position: relative;
+		font-size: 1.4rem;
+		font-weight: bold;
+		color: $white;
+		background-color: $primary-color;
+		border-radius: 10px;
+		border: none;
+		box-shadow: 1px 1px 3px $primary-color;
+		outline: none;
+		cursor: pointer;
+		overflow: hidden;
+		transition: 0.4s;
+
+		&:hover {
+			width: 160px;
+			background-color: $secondary-color;
+			padding-right: 40px;
+			box-shadow: 1px 1px 3px $secondary-color;
+		}
+
+		.fas {
+			position: absolute;
+			top: 35%;
+			margin-left: 20px;
+			transform: translateX(-50%);
+			transition: transform 0.4s;
+			opacity: 0;
+		}
+
+		&:hover .fas {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
 }
+.swiper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 280px;
+}
+
 @import './small';
 @import './medium';
 @import './large';

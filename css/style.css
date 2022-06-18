@@ -536,8 +536,9 @@ button {
 
 .howitworks {
   background-color: #00384f;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
 .how__boxes {
@@ -550,6 +551,11 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
 }
 
 .how__box {
@@ -571,6 +577,7 @@ button {
   background-color: #fff;
   border-radius: 7px;
   padding: 1.5em 0;
+  margin-bottom: 2em;
 }
 
 .how__box--icon {
@@ -592,6 +599,66 @@ button {
   text-align: center;
   line-height: 1.5em;
   padding: 1em 3em;
+}
+
+.how__box--btn {
+  width: 140px;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0ed482;
+  border-radius: 10px;
+  border: none;
+  -webkit-box-shadow: 1px 1px 3px #0ed482;
+          box-shadow: 1px 1px 3px #0ed482;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.how__box--btn:hover {
+  width: 160px;
+  background-color: #00384f;
+  padding-right: 40px;
+  -webkit-box-shadow: 1px 1px 3px #00384f;
+          box-shadow: 1px 1px 3px #00384f;
+}
+
+.how__box--btn .fas {
+  position: absolute;
+  top: 35%;
+  margin-left: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  opacity: 0;
+}
+
+.how__box--btn:hover .fas {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.swiper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 280px;
 }
 
 @media (min-width: 576px) {
@@ -620,6 +687,9 @@ button {
   .header__buttons--discover {
     width: 220px;
   }
+  .swiper {
+    max-width: 480px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -643,6 +713,9 @@ button {
   }
   .header__buttons--discover {
     width: 260px;
+  }
+  .swiper {
+    max-width: 720px;
   }
 }
 
@@ -773,6 +846,9 @@ button {
   }
   .aboutus__lorem {
     font-size: 1.8rem;
+  }
+  .swiper {
+    max-width: 1020px;
   }
 }
 /*# sourceMappingURL=style.css.map */
