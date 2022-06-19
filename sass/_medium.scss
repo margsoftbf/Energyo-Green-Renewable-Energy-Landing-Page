@@ -44,4 +44,17 @@
 			}
 		}
 	}
+
+	.contact__sides {
+		flex-direction: row;
+		padding: 1em;
+		&--left {
+			max-width: 50%;
+		}
+
+		&--right {
+			width: 50%;
+			height: 100%;
+		}
+	}
 }

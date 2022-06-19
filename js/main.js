@@ -93,11 +93,5 @@ function removeSelected() {
 }
 
 
-
-
-
-
-
-
 pricingBoxBtn.forEach(item => item.addEventListener('click', selectedOption))
 navBurger.addEventListener('click', handleNav)

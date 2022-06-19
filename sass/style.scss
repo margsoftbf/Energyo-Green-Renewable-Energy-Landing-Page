@@ -796,6 +796,126 @@ button {
 		font-weight: bold;
 	}
 }
+
+.contact__sides {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 1em 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	&--left {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+		height: 100%;
+		padding: 1em;
+
+		.left__title {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 3.6rem;
+			color: $secondary-color;
+		}
+
+		.left__desc {
+			margin: 1em 0;
+			color: $light-gray;
+			font-style: italic;
+		}
+	}
+	.contact__form {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		margin-bottom: 1em;
+
+		&--box {
+			display: flex;
+			flex-direction: column;
+
+			label {
+				color: $dark-gray;
+				margin: 1em 0 0.3em 0;
+				font-size: 1.4rem;
+			}
+
+			input {
+				&:focus {
+					outline: none;
+				}
+			}
+
+			textarea {
+				max-width: 100%;
+				width: 100%;
+				min-width: 100%;
+				height: 100px;
+				padding: 0.5em;
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		&--btn {
+			width: 100%;
+			padding: 10px 20px;
+			position: relative;
+			font-size: 1.4rem;
+			font-weight: bold;
+			color: $white;
+			background-color: $primary-color;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 1px 1px 3px $primary-color;
+			outline: none;
+			cursor: pointer;
+			overflow: hidden;
+			transition: 0.4s;
+			margin: 1em 0;
+
+			&:hover {
+				background-color: $secondary-color;
+				box-shadow: 1px 1px 3px $secondary-color;
+			}
+		}
+	}
+	&--right {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		.right_img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.right__info {
+			font-size: 1.2rem;
+			color: $dark-gray;
+			margin: 0.5em 0;
+
+			i {
+				margin-right: 0.5em;
+			}
+		}
+
+		.right__socials {
+			display: flex;
+			justify-content: space-evenly;
+			margin: 2em 0;
+
+			img {
+				cursor: pointer;
+			}
+		}
+	}
+}
 @import './small';
 @import './medium';
 @import './large';
