@@ -932,7 +932,6 @@ button {
   background-image: url("../img/gallery_small.jpg");
   background-size: cover;
   background-position: center;
-  margin-top: 2em;
   overflow: hidden;
 }
 
@@ -958,6 +957,7 @@ button {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2em;
 }
 
 .gallery__box img {
@@ -1234,6 +1234,7 @@ button {
 }
 
 .contact__sides .contact__form--box {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,7 +1283,7 @@ button {
   overflow: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  margin: 1em 0;
+  margin: 2em 0;
 }
 
 .contact__sides .contact__form--btn:hover {
@@ -1297,16 +1298,9 @@ button {
   text-align: center;
 }
 
-.contact__sides--right .right_img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.contact__sides--right .right__img {
+  text-align: center;
+  width: 320px;
 }
 
 .contact__sides--right .right__info {
@@ -1331,6 +1325,26 @@ button {
 
 .contact__sides--right .right__socials img {
   cursor: pointer;
+}
+
+.form__error {
+  display: none;
+}
+
+.error input,
+.error textarea {
+  border: 2px solid rgba(255, 122, 122, 0.5);
+}
+
+.activeError {
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -17px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 80px;
+  color: #ff7a7a;
 }
 
 @media (min-width: 576px) {
@@ -1374,6 +1388,9 @@ button {
   .gallery__box img {
     width: 240px;
     margin: 0.5em;
+  }
+  .contact__sides--right .right__img {
+    width: 100%;
   }
 }
 
@@ -1422,6 +1439,9 @@ button {
   .contact__sides--right {
     width: 50%;
     height: 100%;
+  }
+  .contact__sides--right .right__img {
+    width: 340px;
   }
 }
 
@@ -1561,6 +1581,9 @@ button {
   }
   .pricing-box {
     margin: 0.2em;
+  }
+  .contact__sides--right .right__img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

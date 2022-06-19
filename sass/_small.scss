@@ -49,4 +49,13 @@
 			}
 		}
 	}
+
+	.contact__sides {
+		&--right {
+			.right__img {
+				width: 100%;
+			}
+		}
+	}
+	
 }

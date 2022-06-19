@@ -615,7 +615,7 @@ button {
 	background-image: url('../img/gallery_small.jpg');
 	background-size: cover;
 	background-position: center;
-	margin-top: 2em;
+	// margin: 2em 0;
 	overflow: hidden;
 
 	&__shadow {
@@ -633,6 +633,7 @@ button {
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
+		margin-bottom: 2em;
 
 		img {
 			width: 300px;
@@ -834,6 +835,7 @@ button {
 		margin-bottom: 1em;
 
 		&--box {
+			position: relative;
 			display: flex;
 			flex-direction: column;
 
@@ -876,7 +878,7 @@ button {
 			cursor: pointer;
 			overflow: hidden;
 			transition: 0.4s;
-			margin: 1em 0;
+			margin: 2em 0;
 
 			&:hover {
 				background-color: $secondary-color;
@@ -889,10 +891,9 @@ button {
 		height: 100%;
 		text-align: center;
 
-		.right_img {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		.right__img {
+			text-align: center;
+			width: 320px;
 		}
 
 		.right__info {
@@ -915,6 +916,24 @@ button {
 			}
 		}
 	}
+}
+.form__error {
+	display: none;
+}
+.error input,
+.error textarea {
+	border: 2px solid hsla(0, 100%, 74%, 0.5);
+}
+
+.activeError {
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: -17px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-left: 80px;
+	color: hsl(0, 100%, 74%);
 }
 @import './small';
 @import './medium';

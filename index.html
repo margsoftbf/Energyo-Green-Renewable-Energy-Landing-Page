@@ -431,16 +431,19 @@
                             <div class="contact__form--box">
                                 <label for="name">Your name:</label>
                                 <input type="text" id="name">
+                                <p class="form__error">Your Name cannot be empty</p>
                             </div>
 
                             <div class="contact__form--box">
                                 <label for="mail">Your email:</label>
                                 <input type="email" id="mail">
+                                <p class="form__error">Looks like this is not an email</p>
                             </div>
 
                             <div class="contact__form--box">
                                 <label for="msg">Message:</label>
                                 <textarea id="msg" cols="30" rows="10" placeholder="Your message"></textarea>
+                                <p class="form__error">Your message cannot be empty</p>
                             </div>
                             <button type="submit" class="contact__form--btn">Send</button>
                         </form>
@@ -463,6 +466,7 @@
         </section>
     </main>
     <script src="./js/main.js"></script>
+    <script src="./js/checkForm.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="https://kit.fontawesome.com/7b4480fb9a.js" crossorigin="anonymous"></script>

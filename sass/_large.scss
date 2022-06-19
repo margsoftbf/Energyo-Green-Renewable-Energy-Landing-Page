@@ -145,4 +145,12 @@
 	.pricing-box {
 		margin: 0.2em;
 	}
+
+	.contact__sides {
+		&--right {
+			.right__img {
+				width: 100%;
+			}
+		}
+	}
 }
