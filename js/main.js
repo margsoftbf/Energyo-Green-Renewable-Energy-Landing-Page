@@ -49,7 +49,7 @@ const startCounter = entry => {
                 const finalNumber = counter.getAttribute('data-number')
                 const value = parseInt(counter.textContent)
 
-                const speed = finalNumber / 300
+                const speed = finalNumber / 400
 
 
                 if (value < finalNumber) {
